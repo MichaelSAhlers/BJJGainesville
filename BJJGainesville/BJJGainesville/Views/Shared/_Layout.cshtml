@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BJJ Gainesville</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://use.fontawesome.com/ef8ac61c6d.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("MG BJJ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Instructors", "Instructors", "Home")</li>
+                    <li>@Html.ActionLink("Schedule", "Schedule", "Home")</li>
+                    <li>@Html.ActionLink("Academy Rules", "Rules", "Home")</li>
+                    <li>@Html.ActionLink("Student Rankings", "Rankings", "Home")</li>
+                    <li>@Html.ActionLink("Pricing", "Pricing", "Home")</li>
+                    <li>@Html.ActionLink("Kid's Program", "Kids", "Home")</li>
+                    <li>@Html.ActionLink("Free Trial!", "Trial", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Marcelo Garcia Jiu Jitsu Association of Gainesville, FL</p>
+            <div style="text-align: right;">
+                <a href="https://facebook.com/bjjgainesville"><i class="fa fa-facebook-official fa-5x"></i>Facebook</a> <a href="https://instagram.com/bjjgainesville_marcelogarcia"><i class="fa fa-instagram fa-5x"></i>Instagram</a>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="https://use.fontawesome.com/ef8ac61c6d.js"></script>
+</body>
+</html>
